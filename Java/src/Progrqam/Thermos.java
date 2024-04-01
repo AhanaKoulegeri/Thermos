@@ -23,6 +23,18 @@ public class Thermos {
 		this.availableVolume += volume;
 		System.out.println(volume + "litres or " + liquidName + " added to the thermos.");
 	}
+	public void pourliquid(double volume) {
+		if (volume <=0) {
+			System.out.println("Volume should be greater than 0.");
+			return;
+		}
+		if (volume > availableVolume) {
+			System.out.println("Volume should be greater than 0.");
+			return;
+		}
+		availableVolume -= volume;
+		System.out.println(volume + " litres of " + liquid + " poured out of the thermos.");
+	}
 	public void displayDetails() {
 		System.out.println("Thermos Brand: " + brand);
 		System.out.println("Available Volume: " + availableVolume + " litres");
